@@ -110,8 +110,8 @@ function parse_data(data) {
 		device_name = devices[coreid];
 	
 	// Publish a response!
-	spark.publishEvent(EVENT_PUBLISH, device_name);
-	_log('<<<', coreid, device_name);
+	spark.publishEvent(EVENT_PUBLISH, data.coreid+'='+device_name);
+	_log('<<<', coreid, data.coreid+'='+device_name);
 }
 
 
