@@ -1,3 +1,5 @@
+_Only after writing this did I discover that it is redundant -- https://docs.particle.io/reference/firmware/photon/#get-device-name_
+
 particle-whoami
 ===============
 
