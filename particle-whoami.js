@@ -5,7 +5,6 @@ var udp   = require('dgram').createSocket('udp4'),
 
 // Require variables
 var ACCESS_TOKEN = (process.env.ACCESS_TOKEN ? process.env.ACCESS_TOKEN : '').trim();
-var EVENT_SCOPE = (process.env.EVENT_SCOPE ? false : 'mine');
 
 // Optional variables
 // The event to listen for
@@ -81,7 +80,7 @@ function subscribe() {
 	_log('subscription started');
 
 	// Subscribe
-	var req = spark.getEventStream(EVENT_SUBSCRIBE, EVENT_SCOPE, function(data) {
+	var req = spark.getEventStream(EVENT_SUBSCRIBE, 'mine', function(data) {
 		parse_data(data);
 	});
 
